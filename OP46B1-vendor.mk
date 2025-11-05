@@ -6,10 +6,9 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/oppo/OP46B1
 
 PRODUCT_COPY_FILES += \
-    vendor/oppo/OP46B1/proprietary/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/oppo/OP46B1/proprietary/odm/bin/hw/android.hardware.drm@1.3-service.widevine:$(TARGET_COPY_OUT_ODM)/bin/hw/android.hardware.drm@1.3-service.widevine \
+    vendor/oppo/OP46B1/proprietary/odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service \
     vendor/oppo/OP46B1/proprietary/odm/bin/hw/vendor.oplus.hardware.motorcontrol@1.0-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor.oplus.hardware.motorcontrol@1.0-service \
-    vendor/oppo/OP46B1/proprietary/odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/General_cal.acdb \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Global_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Global_cal.acdb \
@@ -17,14 +16,11 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Hdmi_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Hdmi_cal.acdb \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Headset_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Headset_cal.acdb \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Speaker_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Speaker_cal.acdb \
-    vendor/oppo/OP46B1/proprietary/odm/etc/bluetooth.cfg:$(TARGET_COPY_OUT_ODM)/etc/bluetooth.cfg \
     vendor/oppo/OP46B1/proprietary/odm/etc/gps.conf:$(TARGET_COPY_OUT_ODM)/etc/gps.conf \
     vendor/oppo/OP46B1/proprietary/odm/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_ODM)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/oppo/OP46B1/proprietary/odm/etc/init/vendor.oplus.hardware.motorcontrol@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.motorcontrol@1.0-service.rc \
-    vendor/oppo/OP46B1/proprietary/odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc \
     vendor/oppo/OP46B1/proprietary/odm/etc/izat.conf:$(TARGET_COPY_OUT_ODM)/etc/izat.conf \
     vendor/oppo/OP46B1/proprietary/odm/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
-    vendor/oppo/OP46B1/proprietary/odm/etc/permissions/vendor-oplus-hardware-oplusSensor.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/vendor-oplus-hardware-oplusSensor.xml \
     vendor/oppo/OP46B1/proprietary/odm/etc/sap.conf:$(TARGET_COPY_OUT_ODM)/etc/sap.conf \
     vendor/oppo/OP46B1/proprietary/odm/etc/sensor.cfg:$(TARGET_COPY_OUT_ODM)/etc/sensor.cfg \
     vendor/oppo/OP46B1/proprietary/odm/etc/sensor/config/alsps.json:$(TARGET_COPY_OUT_ODM)/etc/sensor/config/alsps.json \
@@ -41,26 +37,46 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/odm/firmware/tp/18097/FW_S3706_SAMSUNG.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/18097/FW_S3706_SAMSUNG.img \
     vendor/oppo/OP46B1/proprietary/odm/firmware/tp/18097/FW_S3706_SAMSUNG_FAE.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/18097/FW_S3706_SAMSUNG_FAE.img \
     vendor/oppo/OP46B1/proprietary/odm/firmware/tp/18097/LIMIT_S3706_SAMSUNG.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/18097/LIMIT_S3706_SAMSUNG.img \
-    vendor/oppo/OP46B1/proprietary/odm/lib/hw/vendor.oplus.hardware.bluetooth_audio@1.0-impl.so:$(TARGET_COPY_OUT_ODM)/lib/hw/vendor.oplus.hardware.bluetooth_audio@1.0-impl.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/hw/fingerprint.goodix_G2.default.so:$(TARGET_COPY_OUT_ODM)/lib/hw/fingerprint.goodix_G2.default.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/hw/fingerprint.goodix_G3.default.so:$(TARGET_COPY_OUT_ODM)/lib/hw/fingerprint.goodix_G3.default.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/hw/fingerprint.goodix_G5.default.so:$(TARGET_COPY_OUT_ODM)/lib/hw/fingerprint.goodix_G5.default.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/hw/fingerprint.goodix_G6.default.so:$(TARGET_COPY_OUT_ODM)/lib/hw/fingerprint.goodix_G6.default.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/libgf_hal_G2.so:$(TARGET_COPY_OUT_ODM)/lib/libgf_hal_G2.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/libgf_hal_G3.so:$(TARGET_COPY_OUT_ODM)/lib/libgf_hal_G3.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/libgf_hal_G5.so:$(TARGET_COPY_OUT_ODM)/lib/libgf_hal_G5.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/libgf_hal_G6.so:$(TARGET_COPY_OUT_ODM)/lib/libgf_hal_G6.so \
     vendor/oppo/OP46B1/proprietary/odm/lib/libormshalclient.so:$(TARGET_COPY_OUT_ODM)/lib/libormshalclient.so \
     vendor/oppo/OP46B1/proprietary/odm/lib/libpn553_fw.so:$(TARGET_COPY_OUT_ODM)/lib/libpn553_fw.so \
-    vendor/oppo/OP46B1/proprietary/odm/lib/oplus_btaudio_offload_if.so:$(TARGET_COPY_OUT_ODM)/lib/oplus_btaudio_offload_if.so \
-    vendor/oppo/OP46B1/proprietary/odm/lib/vendor.oplus.hardware.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_ODM)/lib/vendor.oplus.hardware.bluetooth_audio@1.0.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so:$(TARGET_COPY_OUT_ODM)/lib/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib/vendor.oplus.hardware.orms@1.0.so:$(TARGET_COPY_OUT_ODM)/lib/vendor.oplus.hardware.orms@1.0.so \
-    vendor/oppo/OP46B1/proprietary/odm/lib64/hw/vendor.oplus.hardware.bluetooth_audio@1.0-impl.so:$(TARGET_COPY_OUT_ODM)/lib64/hw/vendor.oplus.hardware.bluetooth_audio@1.0-impl.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/hw/fingerprint.goodix_G2.default.so:$(TARGET_COPY_OUT_ODM)/lib64/hw/fingerprint.goodix_G2.default.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/hw/fingerprint.goodix_G3.default.so:$(TARGET_COPY_OUT_ODM)/lib64/hw/fingerprint.goodix_G3.default.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/hw/fingerprint.goodix_G5.default.so:$(TARGET_COPY_OUT_ODM)/lib64/hw/fingerprint.goodix_G5.default.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/hw/fingerprint.goodix_G6.default.so:$(TARGET_COPY_OUT_ODM)/lib64/hw/fingerprint.goodix_G6.default.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/libaudioEngineerTest.so:$(TARGET_COPY_OUT_ODM)/lib64/libaudioEngineerTest.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/libgf_hal_G2.so:$(TARGET_COPY_OUT_ODM)/lib64/libgf_hal_G2.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/libgf_hal_G3.so:$(TARGET_COPY_OUT_ODM)/lib64/libgf_hal_G3.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/libgf_hal_G5.so:$(TARGET_COPY_OUT_ODM)/lib64/libgf_hal_G5.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/libgf_hal_G6.so:$(TARGET_COPY_OUT_ODM)/lib64/libgf_hal_G6.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/libormshalclient.so:$(TARGET_COPY_OUT_ODM)/lib64/libormshalclient.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/libwvhidl.so:$(TARGET_COPY_OUT_ODM)/lib64/libwvhidl.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_ODM)/lib64/mediadrm/libwvdrmengine.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/oplus.sensors.ssc.so:$(TARGET_COPY_OUT_ODM)/lib64/oplus.sensors.ssc.so \
-    vendor/oppo/OP46B1/proprietary/odm/lib64/oplus_btaudio_offload_if.so:$(TARGET_COPY_OUT_ODM)/lib64/oplus_btaudio_offload_if.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.appradio@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.appradio@1.0.so \
-    vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.bluetooth_audio@1.0.so \
+    vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.ims@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.ims@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.motorcontrol@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.motorcontrol@1.0.so \
-    vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.oplusSensor@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.orms@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.orms@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.radio@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.radio@1.0.so \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.b00:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.b00 \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.b01:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.b01 \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.b02:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.b02 \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.b03:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.b03 \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.b04:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.b04 \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.b05:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.b05 \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.b06:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.b06 \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.b07:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.b07 \
+    vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/goodixfp.mdt:$(TARGET_COPY_OUT_ODM)/vendor/firmware/goodixfp.mdt \
     vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/widevine.b00:$(TARGET_COPY_OUT_ODM)/vendor/firmware/widevine.b00 \
     vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/widevine.b01:$(TARGET_COPY_OUT_ODM)/vendor/firmware/widevine.b01 \
     vendor/oppo/OP46B1/proprietary/odm/vendor/firmware/widevine.b02:$(TARGET_COPY_OUT_ODM)/vendor/firmware/widevine.b02 \
@@ -76,18 +92,18 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
+    vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml \
+    vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml \
+    vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_libpermissions.xml \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
-    vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephonyservice.xml \
+    vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.ims.rcsservice.xml \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/seccomp_policy/wfdservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice.policy \
-    vendor/oppo/OP46B1/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
     vendor/oppo/OP46B1/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
-    vendor/oppo/OP46B1/proprietary/system_ext/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qcrilhook.jar \
-    vendor/oppo/OP46B1/proprietary/system_ext/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qti-telephony-common.jar \
     vendor/oppo/OP46B1/proprietary/system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmosal.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib/libwfdavenhancements.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfdavenhancements.so \
@@ -102,11 +118,14 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.uceservice@2.0.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.uceservice@2.1.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.uceservice@2.2.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/com.qualcomm.qti.uceservice@2.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.uceservice@2.3.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/fm_helium.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvideocodec.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvt.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvtextutils.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvtutils.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptXHD_encoder.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptX_encoder.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/libdiag_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdiag_system.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/libdpmctmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmctmgr.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/libdpmfdmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmfdmgr.so \
@@ -141,9 +160,25 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.radio.ims@1.2.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.radio.ims@1.3.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.4.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.radio.ims@1.4.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.5.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.radio.ims@1.5.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.6.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.radio.ims@1.6.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.7.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.radio.ims@1.7.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.hardware.radio.ims@1.8.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.radio.ims@1.8.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.callcapability@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.callcapability@1.0.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.callinfo@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.callinfo@1.0.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.configservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.configservice@1.0.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.connection@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.connection@1.0.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.factory@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.factory@1.0.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.factory@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.factory@1.1.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.factory@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.factory@2.0.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.rcsconfig@1.1.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.rcsconfig@2.0.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.rcsconfig@2.1.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.rcssip@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.rcssip@1.0.so \
+    vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.ims.rcsuce@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ims.rcsuce@1.0.so \
     vendor/oppo/OP46B1/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.0.so \
+    vendor/oppo/OP46B1/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/oppo/OP46B1/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/oppo/OP46B1/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
     vendor/oppo/OP46B1/proprietary/vendor/bin/cdsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/cdsprpcd \
@@ -173,6 +208,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/bin/init.qcom.sensors.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sensors.sh \
     vendor/oppo/OP46B1/proprietary/vendor/bin/init.qti.qcv.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.qcv.sh \
     vendor/oppo/OP46B1/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
+    vendor/oppo/OP46B1/proprietary/vendor/bin/ks:$(TARGET_COPY_OUT_VENDOR)/bin/ks \
     vendor/oppo/OP46B1/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
     vendor/oppo/OP46B1/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
     vendor/oppo/OP46B1/proprietary/vendor/bin/mlid:$(TARGET_COPY_OUT_VENDOR)/bin/mlid \
@@ -192,6 +228,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/bin/rmt_storage:$(TARGET_COPY_OUT_VENDOR)/bin/rmt_storage \
     vendor/oppo/OP46B1/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
     vendor/oppo/OP46B1/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
+    vendor/oppo/OP46B1/proprietary/vendor/bin/ssgtzd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgtzd \
     vendor/oppo/OP46B1/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
     vendor/oppo/OP46B1/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
     vendor/oppo/OP46B1/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
@@ -246,7 +283,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/oppo/OP46B1/proprietary/vendor/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
     vendor/oppo/OP46B1/proprietary/vendor/etc/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf \
-    vendor/oppo/OP46B1/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
@@ -270,6 +306,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/init_thermal-engine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
+    vendor/oppo/OP46B1/proprietary/vendor/etc/init/ipacm-diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipacm-diag.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
@@ -289,7 +326,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/oppo/OP46B1/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
-    vendor/oppo/OP46B1/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/oppo/OP46B1/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     vendor/oppo/OP46B1/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/oppo/OP46B1/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
@@ -307,8 +343,8 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/etc/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml \
     vendor/oppo/OP46B1/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/oppo/OP46B1/proprietary/vendor/etc/qdcm_calib_data_oppo18081samsung_ams641rw01_1080_2340_cmd_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_oppo18081samsung_ams641rw01_1080_2340_cmd_mode_dsi_panel.xml \
-    vendor/oppo/OP46B1/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/oppo/OP46B1/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
+    vendor/oppo/OP46B1/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
     vendor/oppo/OP46B1/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/oppo/OP46B1/proprietary/vendor/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     vendor/oppo/OP46B1/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
@@ -379,6 +415,8 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/etc/sensors/config/sx932x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sx932x_0.json \
     vendor/oppo/OP46B1/proprietary/vendor/etc/sensors/config/tsl2540_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/tsl2540_0.json \
     vendor/oppo/OP46B1/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
+    vendor/oppo/OP46B1/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
+    vendor/oppo/OP46B1/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/oppo/OP46B1/proprietary/vendor/etc/system_properties.xml:$(TARGET_COPY_OUT_VENDOR)/etc/system_properties.xml \
     vendor/oppo/OP46B1/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     vendor/oppo/OP46B1/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
@@ -482,13 +520,11 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib/egl/libGLESv2_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv2_adreno.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_adreno.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_esx.so \
-    vendor/oppo/OP46B1/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/hw/audio.bluetooth_qti.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.bluetooth_qti.default.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.qcom.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qti.chi.override.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/hw/sound_trigger.primary.sdm710.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.sdm710.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so \
-    vendor/oppo/OP46B1/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so \
@@ -520,13 +556,12 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libarcsoft_picauto.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_picauto.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libarcsoft_relighting_pro_image.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_relighting_pro_image.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libarcsoft_smart_denoise.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_smart_denoise.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib/libarm_proxy_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarm_proxy_skel.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudio_log_utils.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti.so \
-    vendor/oppo/OP46B1/proprietary/vendor/lib/libbluetooth_audio_session_qti_2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti_2_1.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libblur_channel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libblur_channel.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libbokehclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbokehclient.so \
-    vendor/oppo/OP46B1/proprietary/vendor/lib/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbtnv.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc++_shared.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30_bltlib.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libcamera_core_hwi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera_core_hwi.so \
@@ -553,6 +588,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libgcs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpudataproducer.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib/libhvx_proxy_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhvx_proxy_stub.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libjnihelper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjnihelper.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/liblistensoundmodel2.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblistensoundmodel2.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-glnext.so \
@@ -570,6 +606,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib/liboppo_platform_hwi.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboppo_platform_hwi.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libopposfr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libopposfr.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libpvr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpvr.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_cci.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libqmi_client_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_client_helper.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/libqmi_client_qmux.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_client_qmux.so \
@@ -633,6 +670,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libsns_low_lat_stream_skel.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libasphere.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/soundfx/libshoebox.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libshoebox.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib/vendor.oplus.hardware.commondcs@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oplus.hardware.commondcs@1.0.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.0.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.1.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib/vendor.qti.hardware.dsp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.dsp@1.0.so \
@@ -736,7 +774,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/hw/sound_trigger.primary.sdm710.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.sdm710.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@4.0-impl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so \
-    vendor/oppo/OP46B1/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so \
@@ -812,11 +849,11 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libarcsoft_low_light_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_low_light_hdr.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libarcsoft_smart_denoise.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_smart_denoise.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libarcsoft_super_night_raw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_super_night_raw.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib64/libarm_proxy_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarm_proxy_skel.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudcal.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudio_log_utils.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libbatching.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatching.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_qti.so \
-    vendor/oppo/OP46B1/proprietary/vendor/lib64/libbluetooth_audio_session_qti_2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_qti_2_1.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libbokehclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbokehclient.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbtnv.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libc++_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++_shared.so \
@@ -867,6 +904,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libhexagon_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhexagon_nn_stub.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib64/libhvx_proxy_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhvx_proxy_stub.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libidl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libizat_client_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_client_api.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_core.so \
@@ -920,6 +958,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libqcci_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcci_legacy.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libqcmaputils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcmaputils.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libqcrilFramework.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcrilFramework.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib64/libqcrildatactl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcrildatactl.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdi.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libqdma_file_agent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdma_file_agent.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdp.so \
@@ -1014,6 +1053,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.display.color@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.4.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.display.color@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.5.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.oplus.hardware.commondcs@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oplus.hardware.commondcs@1.0.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.data.factory@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.1.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.data.factory@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.2.so \
@@ -1057,6 +1097,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.ims@1.6.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.0.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.1.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so \
@@ -1064,6 +1105,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so \
+    vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.0.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.1.so \
     vendor/oppo/OP46B1/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.2.so \
@@ -1102,7 +1144,9 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     TimeService \
+    ImsRcsService \
     QtiTelephonyService \
+    uceShimService \
     WfdService \
     dpmserviceapp \
     ims \
@@ -1110,11 +1154,20 @@ PRODUCT_PACKAGES += \
     WfdCommon \
     tcmclient \
     com.qti.dpmframework \
+    com.qualcomm.qti.imscmservice-V2.0-java \
+    com.qualcomm.qti.imscmservice-V2.1-java \
+    com.qualcomm.qti.imscmservice-V2.2-java \
     dpmapi \
+    qcrilhook \
+    qti-telephony-common \
+    vendor.qti.ims.connection-V1.0-java \
+    vendor.qti.ims.factory-V1.0-java \
+    vendor.qti.ims.factory-V1.1-java \
+    vendor.qti.ims.factory-V2.0-java \
+    vendor.qti.ims.rcssip-V1.0-java \
+    vendor.qti.ims.rcsuce-V1.0-java \
     android.hardware.gnss@2.1-service-qti \
     android.hardware.neuralnetworks@1.3-service-qti \
     vendor.qti.gnss@4.0-service \
     manifest_android.hardware.drm@1.3-service.widevine \
-    manifest_oplusSensor \
-    manifest_oplus_bluetooth_audio \
     manifest_oplus_motorcontrol
