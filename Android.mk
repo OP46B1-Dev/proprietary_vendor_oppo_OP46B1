@@ -6,13 +6,26 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),OP46B1)
 
-ifeq ($(LOCAL_PATH)/radio, $(wildcard $(LOCAL_PATH)/radio))
-
-RADIO_FILES := $(wildcard $(LOCAL_PATH)/radio/*)
-$(foreach f, $(notdir $(RADIO_FILES)), \
-    $(call add-radio-file,radio/$(f)))
-$(call add-radio-file,../../../device/oppo/OP46B1/radio/filesmap)
-
-endif
+$(call add-radio-file-sha1-checked,radio/DRIVER.img,6e9a788590ab16c6b4ba1a99c00753c828bff180)
+$(call add-radio-file-sha1-checked,radio/abl.img,263fce13aea7a48ebb356c91efc8f849bf4dfe2a)
+$(call add-radio-file-sha1-checked,radio/aop.img,c130352f04285485af0a15a81c11a744d4a3269f)
+$(call add-radio-file-sha1-checked,radio/apdp.img,2bc75e680854a6903b4e88a27e5374528104547b)
+$(call add-radio-file-sha1-checked,radio/bluetooth.img,c47c9f8811483006b5ee8166f03516e7c8469d0f)
+$(call add-radio-file-sha1-checked,radio/cmnlib.img,b84c3abc151481fdca868fae387b98042d237c96)
+$(call add-radio-file-sha1-checked,radio/cmnlib64.img,787725d4a787e05ccd4d6d040276945114c5364a)
+$(call add-radio-file-sha1-checked,radio/devcfg.img,05a009b4f755a5dc61450a3cab1df3e1219cb87c)
+$(call add-radio-file-sha1-checked,radio/dsp.img,8c785e2e5bfa3dc4def28bc6ae8bdebc9a4b499c)
+$(call add-radio-file-sha1-checked,radio/hyp.img,15740847580175c67d4730263f9dbba5c4964743)
+$(call add-radio-file-sha1-checked,radio/keymaster.img,c8fad2757f32bc21f7c38c02f1dfbe997c03ba52)
+$(call add-radio-file-sha1-checked,radio/modem.img,ef5c61b1a23d847c30109ac4cdb57271048af301)
+$(call add-radio-file-sha1-checked,radio/msadp.img,5fbefa6f3dd44b84bc9703833dbed480f0b556e2)
+$(call add-radio-file-sha1-checked,radio/oppo_sec.img,5036902777c88b8c02c089c8ef6089432cbb2d22)
+$(call add-radio-file-sha1-checked,radio/oppostanvbk.img,9d8f84707f5ce1619c1b53050ae005031c3b8b0a)
+$(call add-radio-file-sha1-checked,radio/qupfw.img,32a011949ca99ea9d9ba8e0f9d2b0ee61b9ae611)
+$(call add-radio-file-sha1-checked,radio/splash.img,4482e5f4264a6e96cbff746c818220b2a25f97ff)
+$(call add-radio-file-sha1-checked,radio/storsec.img,266bea45cfc09176549524fbca7f47c06e2f0924)
+$(call add-radio-file-sha1-checked,radio/tz.img,5cfce4e8eab14a5ad31d3601229c70b8daa75c98)
+$(call add-radio-file-sha1-checked,radio/xbl.img,24caa8b99fa54be665a7bcbc35032eb05c2d77f6)
+$(call add-radio-file-sha1-checked,radio/xbl_config.img,2790c840a4267b83a173da65300ea7895c0d9368)
 
 endif
