@@ -8,7 +8,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/odm/bin/hw/android.hardware.drm@1.3-service.widevine:$(TARGET_COPY_OUT_ODM)/bin/hw/android.hardware.drm@1.3-service.widevine \
     vendor/oppo/OP46B1/proprietary/odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service \
-    vendor/oppo/OP46B1/proprietary/odm/bin/hw/vendor.oplus.hardware.motorcontrol@1.0-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor.oplus.hardware.motorcontrol@1.0-service \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/General_cal.acdb \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Global_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Global_cal.acdb \
@@ -17,7 +16,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Headset_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Headset_cal.acdb \
     vendor/oppo/OP46B1/proprietary/odm/etc/acdbdata/Speaker_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Speaker_cal.acdb \
     vendor/oppo/OP46B1/proprietary/odm/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_ODM)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
-    vendor/oppo/OP46B1/proprietary/odm/etc/init/vendor.oplus.hardware.motorcontrol@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.motorcontrol@1.0-service.rc \
     vendor/oppo/OP46B1/proprietary/odm/etc/sensor.cfg:$(TARGET_COPY_OUT_ODM)/etc/sensor.cfg \
     vendor/oppo/OP46B1/proprietary/odm/etc/sensor/config/alsps.json:$(TARGET_COPY_OUT_ODM)/etc/sensor/config/alsps.json \
     vendor/oppo/OP46B1/proprietary/odm/etc/sensor/config/holi_ak991x_0.json:$(TARGET_COPY_OUT_ODM)/etc/sensor/config/holi_ak991x_0.json \
@@ -58,7 +56,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.appradio@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.appradio@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.ims@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.ims@1.0.so \
-    vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.motorcontrol@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.motorcontrol@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.orms@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.orms@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/lib64/vendor.oplus.hardware.radio@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.radio@1.0.so \
     vendor/oppo/OP46B1/proprietary/odm/firmware/goodixfp.b00:$(TARGET_COPY_OUT_ODM)/firmware/goodixfp.b00 \
@@ -1072,5 +1069,4 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service-qti.xml \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
     vendor.qti.gnss@4.0-service.xml \
-    manifest_android.hardware.drm@1.3-service.widevine.xml \
-    manifest_oplus_motorcontrol.xml
+    manifest_android.hardware.drm@1.3-service.widevine.xml
