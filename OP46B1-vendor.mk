@@ -140,7 +140,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP46B1/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/oppo/OP46B1/proprietary/vendor/etc/qdcm_calib_data_oppo18081samsung_ams641rw01_1080_2340_cmd_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_oppo18081samsung_ams641rw01_1080_2340_cmd_mode_dsi_panel.xml \
     vendor/oppo/OP46B1/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
-    vendor/oppo/OP46B1/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
     vendor/oppo/OP46B1/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/oppo/OP46B1/proprietary/vendor/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     vendor/oppo/OP46B1/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
@@ -790,7 +789,6 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
     vendor.qti.gnss@4.0-service.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
-    ATFWD-daemon \
     adpl \
     adsprpcd \
     cdsprpcd \
